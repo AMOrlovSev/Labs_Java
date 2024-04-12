@@ -13,9 +13,9 @@ public class Main {
         out.println(" ");
 
         // 2. Посчитайте результат выражения
-        int resultInt = (46 + 10) * (10 / 3);
-        out.println(resultInt);
-        out.println((46 + 10) * (10 / 3));
+//        int resultInt = (46 + 10) * (10 / (3);
+//        out.println(resultInt);
+//        out.println((46 + 10) * (10 / 3));
         Double resultDouble = (46 + 10) * (10 / 3.0);
         out.println(resultDouble);
         out.println((29) * (4) * (-15));
@@ -23,7 +23,7 @@ public class Main {
 
         // 3. В переменной
         int number = 10500;
-        int result = number / 10 / 10;
+        Double result = Double.valueOf(number) / 10 / 10;
         out.println(result);
         out.println(" ");
 

@@ -24,13 +24,13 @@ public class Calculator {
         return result;
     }
 
-    public long Division(long number1, long number2) {
-        long result = number1 / number2;
+    public double Division(long number1, long number2) {
+        double result = number1 / Double.valueOf(number2);
         return result;
     }
 
-    public int Division(int number1, int number2) {
-        int result = number1 / number2;
+    public double Division(int number1, int number2) {
+        double result = number1 / Double.valueOf(number2);
         return result;
     }
 

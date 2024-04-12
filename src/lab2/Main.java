@@ -24,10 +24,10 @@ public class Main {
             double x1 = 1.1;
             double x2 = 2.2;
             double resultDivisionDouble = calculator.Division(x1, x2);
-            long resultDivisionLong = calculator.Division(1000000000L, 300000000L);
+            double resultDivisionLong = calculator.Division(1000000000L, 300000000L);
             int a = 1;
             int b = 2;
-            int resultDivisionInt = calculator.Division(a, b);
+            double resultDivisionInt = calculator.Division(a, b);
             out.println("Деление");
             out.println(resultDivisionDouble);
             out.println(resultDivisionLong);
