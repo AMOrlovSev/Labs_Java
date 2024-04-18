@@ -50,13 +50,13 @@ public class Main {
 
     // 3. Напишите программу, чтобы вычислить сумму двух целых чисел и вернуть true, если сумма равна третьему целому числу
     public static void Ex3() {
-        int[] numbersEx3 = Get3Numbers();
+        int[] numbersEx3 = get3Numbers();
 
         Boolean result = isCompareSum(numbersEx3[0], numbersEx3[1], numbersEx3[2]);
         System.out.println(result);
     }
 
-    public static int[] Get3Numbers()
+    public static int[] get3Numbers()
     {
         int[] numbers = new int[3];
         Scanner scanner = new Scanner(System.in);
@@ -75,7 +75,7 @@ public class Main {
 
     // 4. Напишите программу, которая принимает от пользователя три целых числа и возвращает true, если второе число больше первого числа, а третье число больше второго числа
     public static void Ex4() {
-        int[] numbersEx4 = Get3Numbers();
+        int[] numbersEx4 = get3Numbers();
 
         Boolean result = isMoreMore(numbersEx4[0], numbersEx4[1], numbersEx4[2]);
         System.out.println(result);
@@ -92,12 +92,12 @@ public class Main {
         System.out.print("Введите длину массива:");
         int arrayLength = scanner.nextInt();
 
-        int[] arrayNumbers = GetNumbers(arrayLength);
+        int[] arrayNumbers = getNumbers(arrayLength);
         Boolean result = is3inArray(arrayNumbers);
         System.out.println(result);
     }
 
-    public static int[] GetNumbers(int numbers)
+    public static int[] getNumbers(int numbers)
     {
         int[] arrayNumbers = new int[numbers];
         Scanner scanner = new Scanner(System.in);
@@ -109,11 +109,10 @@ public class Main {
     }
 
     public static Boolean is3inArray(int[] numbers) {
-        for (int number : numbers){
-            if (number == 3)
+            if (numbers[0] == 3 || numbers[numbers.length-1] == 3)
                 return true;
-        }
-        return false;
+            else
+                return false;
     }
 
     // 6. Напишите программу, чтобы проверить, что массив содержит число 1 или 3
@@ -123,7 +122,7 @@ public class Main {
         System.out.print("Введите длину массива:");
         int arrayLength = scanner.nextInt();
 
-        int[] arrayNumbers = GetNumbers(arrayLength);
+        int[] arrayNumbers = getNumbers(arrayLength);
 
         Boolean result = is1or3inArray(arrayNumbers);
         System.out.println(result);

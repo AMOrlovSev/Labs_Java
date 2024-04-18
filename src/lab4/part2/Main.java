@@ -47,11 +47,11 @@ public class Main {
         System.out.print("Array length: ");
         int arrayLength = scanner.nextInt();
 
-        int[] arrayNumbers = GetNumbers(arrayLength);
-        PrintNumbers(arrayNumbers);
+        int[] arrayNumbers = getNumbers(arrayLength);
+        printNumbers(arrayNumbers);
     }
 
-    public static int[] GetNumbers(int numbers) {
+    public static int[] getNumbers(int numbers) {
         System.out.println("Numbers of array:");
         int[] arrayNumbers = new int[numbers];
         Scanner scanner = new Scanner(System.in);
@@ -62,7 +62,7 @@ public class Main {
         return arrayNumbers;
     }
 
-    public static void PrintNumbers(int[] arrayNumbers) {
+    public static void printNumbers(int[] arrayNumbers) {
         System.out.println("Result: " + Arrays.toString(arrayNumbers));
 //        System.out.print("Result: ");
 //        for (int i : arrayNumbers) {
@@ -72,11 +72,11 @@ public class Main {
 
     //3. Напишите метод, который меняет местами первый и последний элемент массива
     public static void Ex3(int[] numbers) {
-        SwapNumbers(numbers);
-        PrintNumbers(numbers);
+        swapNumbers(numbers);
+        printNumbers(numbers);
     }
 
-    public static int[] SwapNumbers(int[] numbers) {
+    public static int[] swapNumbers(int[] numbers) {
         int temp = numbers[0];
         numbers[0] = numbers[numbers.length - 1];
         numbers[numbers.length - 1] = temp;
@@ -85,10 +85,10 @@ public class Main {
 
     // 4. Дан массив чисел. Найдите первое уникальное в этом массиве число
     public static void Ex4(int[] numbers) {
-        System.out.println(UniqueNumber(numbers));
+        System.out.println(uniqueNumber(numbers));
     }
 
-    public static int UniqueNumber(int[] numbers) {
+    public static int uniqueNumber(int[] numbers) {
         int number = numbers[0];
         Boolean end = false;
         for (int i = 0; i < numbers.length - 1; i++) {
