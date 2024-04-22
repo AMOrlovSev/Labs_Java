@@ -17,7 +17,7 @@ public class Main {
         System.out.println(isPalindrome_Ex2("ABBA"));
 
         String test_Ex3 = "Напишите метод, заменяющий в тексте все вхождения слова «бяка» на «[вырезано цензурой]»";
-        System.out.println((replaceByaka_Ex3(test_Ex3)));
+        System.out.println((replaceByaka_Ex3(test_Ex3, "бяка", "[вырезано цензурой]")));
 
         String string_Ex4 = "helloslkhellodjladfjhello";
         String substring_Ex4 = "hello";
@@ -62,9 +62,9 @@ public class Main {
     }
 
     // 3. Напишите метод, заменяющий в тексте все вхождения слова «бяка» на «[вырезано цензурой]»
-    public static String replaceByaka_Ex3(String text) {
+    public static String replaceByaka_Ex3(String text, String target, String replacement) {
         String result = "";
-        result = text.replace("бяка", "[вырезано цензурой]");
+        result = text.replaceAll(target, replacement);
         return result;
     }
 
